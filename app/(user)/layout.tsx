@@ -27,7 +27,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       {/*Banner*/}
-      <body className="bg-white-primary max-w-screen-2xl 2xl:max-w-full m-auto">
+      <body className="bg-white-primary dark:bg-black-secondary max-w-screen-2xl 2xl:max-w-full m-auto">
         <Header />
         {children}
       </body>

@@ -20,7 +20,7 @@ type Props = {
 export default function BlogList({ posts }: Props) {
   return (
     <div>
-      <div>
+      <div className="dark:text-white-primary">
         <h1 className="text-2xl font-bai sm:hidden p-4 ">
           Based in India with deep interest in{" "}
           <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 w-full h-10 text-transparent bg-clip-text">
@@ -78,8 +78,8 @@ export default function BlogList({ posts }: Props) {
             "For design and rapid prototyping I use Figma, and to built out the apps and site I primarily use Next.js and Tailwind CSS for frontend and BAAS such as Sanity or Contentful as the backend."
           }
         />
-        <div className=" px-4 lg:px-48 grid grid-cols-3 justify-items-center  sm:flex items-center justify-evenly gap-5">
-          <div className="inline-flex flex-col items-center justify-center">
+        <div className=" px-4 lg:px-48 grid grid-cols-3 justify-items-center  sm:flex items-center justify-evenly gap-5 dark:text-white-primary">
+          <div className="inline-flex flex-col items-center justify-center ">
             <div className="relative w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 overflow-hidden drop-shadow-lg ">
               <Image src={Figma} alt="" fill />
             </div>
@@ -133,7 +133,7 @@ export default function BlogList({ posts }: Props) {
           subheading={"Have a project? Or just wanna chat? Shoot me an email!"}
           description={"You can send me an email, address provided below."}
         />
-        <div className="px-4 md:px-6 lg:px-8 font-extrabold text-xl sm:text-2xl w-fit">
+        <div className="px-4 md:px-6 lg:px-8 font-extrabold text-xl sm:text-2xl w-fit dark:text-white-primary">
           <Link
             className="flex items-center gap-2 hover:underline"
             href="mailto:rubelalam75@gmail.com"
