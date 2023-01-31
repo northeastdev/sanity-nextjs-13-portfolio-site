@@ -5,7 +5,7 @@ export default function CaseStudyThumbnailTitle({
   title,
   description,
   slug,
-  urlList,
+  URL,
 }: Post) {
   return (
     <div className=" opacity-95 bg-neutral-800 text-sm py-5 px-5 space-y-4 rounded-md text-white">
@@ -34,9 +34,9 @@ export default function CaseStudyThumbnailTitle({
             </div>
           </Link>
         </div>
+
         <div className="text-sm hover:underline w-fit">
-          {/* Live Demo link */}
-          <Link href={`${urlList[0]!}`}>
+          <Link href={`${URL.demoURL}`}>
             <div className="text-white flex items-center gap-1">
               <p>Live</p>
               <svg
@@ -57,8 +57,7 @@ export default function CaseStudyThumbnailTitle({
           </Link>
         </div>
         <div className="text-sm hover:underline w-fit">
-          {/* Source Code link */}
-          <Link href={`${urlList[1]!}`}>
+          <Link href={`${URL.codeURL}`}>
             <div className="text-white flex items-center gap-1">
               <p>Code</p>
               <svg

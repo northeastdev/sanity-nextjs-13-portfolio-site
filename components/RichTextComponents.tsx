@@ -37,7 +37,7 @@ export const RichTextComponents = {
   block: {
     // Ex. 1: customizing common block types
     h1: ({ children }: any) => (
-      <h1 className="text-3xl md:text-4xl my-8">{children}</h1>
+      <h1 className="text-3xl md:text-4xl my-8 dark:text-white">{children}</h1>
     ),
     h2: ({ children }: any) => (
       <h2 className="text-xl md:text-3xl my-6">{children}</h2>
@@ -53,14 +53,14 @@ export const RichTextComponents = {
   },
   list: {
     bullet: ({ children }: any) => (
-      <ul className="pl-4 my-10 list-disc space-y-2">{children}</ul>
+      <ul className="pl-4 my-10 list-disc space-y-2 px-4">{children}</ul>
     ),
     number: ({ children }: any) => (
-      <ol className="mt-10 list-decimal space-y-2">{children}</ol>
+      <ol className="mt-10 list-decimal space-y-2 px-4">{children}</ol>
     ),
 
     checkmarks: ({ children }: any) => (
-      <ol className="m-auto text-lg">{children}</ol>
+      <ol className="m-auto text-lg px-4">{children}</ol>
     ),
   },
   listItem: {

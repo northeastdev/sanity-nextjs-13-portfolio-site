@@ -7,6 +7,7 @@ type Base = {
   _rev: string;
   _type: string;
   _updatedAt: string;
+  URL: URL;
 };
 
 interface Post extends Base {
@@ -14,7 +15,6 @@ interface Post extends Base {
   body: Block[];
   categories: Category[];
   mainImage: Image;
-  urlList: Url[];
   slug: Slug;
   title: string;
   description: string;
@@ -48,6 +48,11 @@ interface Image {
 interface Slug {
   _type: "slug";
   current: string;
+}
+
+interface URL {
+  codeURL: string;
+  demoURL: string;
 }
 
 interface Title {

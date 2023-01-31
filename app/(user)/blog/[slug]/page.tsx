@@ -24,8 +24,6 @@ export async function generateStaticParams() {
   const slugs: Post[] = await client.fetch(query);
   const slugRoutes = slugs.map((slug) => slug.slug.current);
 
-  console.log(slugRoutes);
-
   return slugRoutes.map((slug) => ({
     slug,
   }));
@@ -42,7 +40,7 @@ export default async function BlogPost({ params: { slug } }: Props) {
 
   return (
     <article className="max-w-5xl m-auto">
-      <h1 className="font-bai text-3xl lg:font-semibold 2xl:text-5xl px-4 pt-10 md:p-6 lg:px-8 lg:pt-20">
+      <h1 className="font-bai text-3xl lg:font-semibold 2xl:text-5xl px-4 pt-10 md:p-6 lg:px-8 lg:pt-20 dark:text-white-primary">
         {post.title}
       </h1>
       <div className="flex items-end gap-2 p-4 md:px-6 lg:px-8">
@@ -54,8 +52,8 @@ export default async function BlogPost({ params: { slug } }: Props) {
           height={40}
         />
         <div>
-          <p className="">{post.author.name}</p>
-          <p className="text-xs">{`Published at ${new Date(
+          <p className=" dark:text-white-secondary">{post.author.name}</p>
+          <p className="text-xs dark:text-white-primary opacity-70">{`Published - ${new Date(
             post._createdAt
           ).toLocaleDateString("en-US", {
             day: "numeric",
@@ -64,7 +62,7 @@ export default async function BlogPost({ params: { slug } }: Props) {
           })}`}</p>
         </div>
       </div>
-      <section className="p-4 md:p-6 lg:px-8 ">
+      <section className="p-4 md:p-6 lg:px-8 dark:text-white-primary ">
         <PortableText value={post.body} components={RichTextComponents} />
       </section>
     </article>

@@ -39,11 +39,23 @@ export default defineType({
       },
     }),
     defineField({
-      title: "URL List",
-      name: "urlList",
-      description: "Add Live Demo link & Source Code link",
-      type: "array",
-      of: [{ name: "urls", type: "url" }],
+      type: "object",
+      name: "URL",
+      fieldsets: [{ name: "urls", title: "Social media handles" }],
+      fields: [
+        {
+          title: "Demo URL",
+          name: "demoURL",
+          type: "url",
+          fieldset: "urls",
+        },
+        {
+          title: "Source Code URL",
+          name: "codeURL",
+          type: "url",
+          fieldset: "urls",
+        },
+      ],
     }),
     defineField({
       name: "categories",
