@@ -8,17 +8,14 @@ import Reactjs from "../public/logos/reactjs-icon.svg";
 import Nodejs from "../public/logos/nodejs-icon.svg";
 import Supabase from "../public/logos/supabase-icon.svg";
 import Git from "../public/logos/git-icon.svg";
+import Twitter from "../public/logos/twitter-alt.svg";
+import Instagram from "../public/logos/instagram.svg";
+import LinkedIn from "../public/logos/linkedin-alt.svg";
+import Github from "../public/logos/github-alt.svg";
 import GradientDivider from "./GradientDivider";
 import Link from "next/link";
 import CaseStudyThumbnail from "./CaseStudyThumbnail";
 import BlogThumbnail from "./BlogThumnail";
-import {
-  UilTwitterAlt,
-  UilInstagram,
-  UilLinkedinAlt,
-  UilGithubAlt,
-  UilArrowUp,
-} from "@iconscout/react-unicons";
 
 type Props = {
   posts: Post[];
@@ -188,51 +185,49 @@ export default function BlogList({ posts }: Props) {
                 className="hover:opacity-70"
                 href="https://twitter.com/AlomRubial"
               >
-                <UilTwitterAlt />
+                <Image src={Twitter} alt="" />
               </Link>
             </li>
             <li>
               <Link
                 className="hover:opacity-70"
                 href="https://www.instagram.com/___rubel.alam___/"
-              >
-                <UilInstagram />
-              </Link>
+              ></Link>
+              <Image src={Instagram} alt="" />
             </li>
             <li>
               <Link
                 className="hover:opacity-70"
                 href="https://www.linkedin.com/in/rubial-alom-0640a3147/"
-              >
-                <UilLinkedinAlt />
-              </Link>
+              ></Link>
+              <Image src={LinkedIn} alt="" />
             </li>
             <li>
               <Link
                 className="hover:opacity-70"
                 href="https://github.com/northeastdev"
-              >
-                <UilGithubAlt />
-              </Link>
+              ></Link>
+              <Image src={Github} alt="" />
             </li>
           </ul>
         </div>
-        <div className="py-16 px-4 md:px-6 lg:px-8">
+        <div className="pt-16 pb-2 px-4 md:px-6 lg:px-8">
           <div className="border border-black-secondary dark:border-white-primary"></div>
-          <div className="py-8 flex items-center justify-between">
+          <div className="py-8 flex flex-col gap-10 items-center justify-between">
             <div className="space-y-2">
               <p className="text-2xl sm:text-3xl font-bai font-bold dark:text-white-primary">
                 Rubial Alom.
               </p>
-              <p className="dark:text-white-primary">
+              <p className="dark:text-white-primary font-semibold opacity-70">
                 Powered by Next.js, Tailwind CSS & Sanity CMS
               </p>
             </div>
             <div>
               <a href="#home">
                 <div className="flex gap-2 dark:text-white-primary">
-                  <UilArrowUp />
-                  <p className="dark:text-white-primary">Back To Top</p>
+                  <p className="dark:text-white-primary hover:scale-110 transition-transform ease-out">
+                    Back To Top ↑
+                  </p>
                 </div>
               </a>
             </div>
