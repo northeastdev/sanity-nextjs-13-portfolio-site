@@ -22,6 +22,7 @@ export default function CaseStudyThumbnail({ posts }: Props) {
             <div className="relative w-full h-[450px] drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
               <Image
                 className="object-cover object-center lg:object-center rounded-md"
+                priority
                 src={urlFor(post.mainImage).url()}
                 alt={post.author.name}
                 fill
