@@ -1,6 +1,7 @@
 import "../globals.css";
 import Header from "@/components/Header";
 import { Inter, Bai_Jamjuree } from "@next/font/google";
+import Navbar from "@/components/Navbar";
 
 const bai = Bai_Jamjuree({
   variable: "--font-bai-jamjuree",
@@ -27,8 +28,8 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       {/*Banner*/}
-      <body className="bg-white-primary dark:bg-black-secondary max-w-screen-2xl 2xl:max-w-full m-auto">
-        <Header />
+      <body className="bg-white-primary dark:bg-black-secondary max-w-screen-2xl 2xl:max-w-full m-auto pt-16">
+        <Navbar />
         {children}
       </body>
     </html>

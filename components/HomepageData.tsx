@@ -21,7 +21,7 @@ export default function BlogList({ posts }: Props) {
   return (
     <div>
       <div className="dark:text-white-primary">
-        <h1 className="text-2xl font-bai sm:hidden p-4 ">
+        <h1 className="text-2xl font-bai px-4 pt-7 pb-5 md:px-6 lg:px-8 max-w-xl">
           Based in India with deep interest in{" "}
           <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 w-full h-10 text-transparent bg-clip-text">
             UI/UX design
@@ -35,7 +35,7 @@ export default function BlogList({ posts }: Props) {
       <div className="relative sm:hidden mt-5">
         <GradientDivider />
       </div>
-      <div className="py-4 md:py-6 lg:py-8 mt-16">
+      <div className="py-4 md:py-6 lg:py-8 pt-16">
         <SectionHeader
           title={"Projects & Case Studies"}
           subheading={"Checkout out my latest UI/UX case studies."}
@@ -45,7 +45,10 @@ export default function BlogList({ posts }: Props) {
         />
         <CaseStudyThumbnail posts={posts} />
       </div>
-      <div className="py-4 md:py-6 lg:py-8 lg:grid grid-cols-2 mt-16">
+      <div
+        id="about"
+        className="py-4 md:py-6 lg:py-8 lg:grid grid-cols-2 pt-16"
+      >
         <SectionHeader
           title={"About Me"}
           subheading={
@@ -71,7 +74,7 @@ export default function BlogList({ posts }: Props) {
           </div>
         </div>
       </div>
-      <div className="py-4 md:py-6 lg:py-8 mt-16">
+      <div className="py-4 md:py-6 lg:py-8 pt-16">
         <SectionHeader
           title={"Tech Stack I Use"}
           subheading={
@@ -120,7 +123,7 @@ export default function BlogList({ posts }: Props) {
           </div>
         </div>
       </div>
-      <div className="py-4 md:py-6 lg:py-8 mt-16">
+      <div id="blogs" className="py-4 md:py-6 lg:py-8 pt-16">
         <SectionHeader
           title={"Blogs"}
           subheading={"Checkout out my latest learnings."}
@@ -130,7 +133,7 @@ export default function BlogList({ posts }: Props) {
         />
         <BlogThumbnail posts={posts} />
       </div>
-      <div className="py-4 md:py-6 lg:py-8 mt-16">
+      <div id="contact" className="py-4 md:py-6 lg:py-8 pt-16">
         <SectionHeader
           title={"Contact Me"}
           subheading={"Have a project? Or just wanna chat? Shoot me an email!"}
