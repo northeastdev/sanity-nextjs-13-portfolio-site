@@ -26,14 +26,10 @@ export default function Navbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="text-black-secondary dark:text-white-primary text-2xl font-bold font-bai">
                 <h1>Rubial Alom.</h1>
-                {/* <p className="text-xs hidden md:block font-normal mt-2">
-                  Based in India with deep interest in UI/UX design & frontend
-                  engineering.
-                </p> */}
               </div>
               <div>
                 <div className="sm:hidden">
-                  <Disclosure.Button className="rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button className="rounded-md p-2 text-black-primary dark:text-gray-400 hover:bg-gray-700 hover:text-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -51,8 +47,8 @@ export default function Navbar() {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? "bg-slate-200 text-black-primary"
-                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                              ? "bg-slate-200 text-black-secondary"
+                              : "text-black-secondary dark:text-white-primary hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                           aria-current={item.current ? "page" : undefined}
@@ -68,7 +64,7 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3 border-b border-slate-600">
+            <div className="space-y-1 px-2 pt-2 pb-3 border-b border-slate-300 bg-white-primary dark:bg-black-secondary">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -77,7 +73,7 @@ export default function Navbar() {
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-800 hover:text-white",
+                      : "text-gray-400 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}

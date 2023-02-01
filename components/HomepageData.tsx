@@ -12,6 +12,13 @@ import GradientDivider from "./GradientDivider";
 import Link from "next/link";
 import CaseStudyThumbnail from "./CaseStudyThumbnail";
 import BlogThumbnail from "./BlogThumnail";
+import {
+  UilTwitterAlt,
+  UilInstagram,
+  UilLinkedinAlt,
+  UilGithubAlt,
+  UilArrowUp,
+} from "@iconscout/react-unicons";
 
 type Props = {
   posts: Post[];
@@ -163,6 +170,73 @@ export default function BlogList({ posts }: Props) {
               />
             </svg>
           </Link>
+        </div>
+      </div>
+      <div
+        id="contact"
+        className="py-4 md:py-6 lg:py-8 pt-24 md:pt-28 lg:pt-32"
+      >
+        <SectionHeader
+          title={"Follow Me"}
+          subheading={"Connect with me on the following socials"}
+          description={"I mostly hangout on twitter and instagram!"}
+        />
+        <div className="px-4 md:px-6 lg:px-8 font-extrabold text-xl sm:text-2xl w-fit dark:text-white-primary">
+          <ul className="flex items-center gap-7">
+            <li>
+              <Link
+                className="hover:opacity-70"
+                href="https://twitter.com/AlomRubial"
+              >
+                <UilTwitterAlt />
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:opacity-70"
+                href="https://www.instagram.com/___rubel.alam___/"
+              >
+                <UilInstagram />
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:opacity-70"
+                href="https://www.linkedin.com/in/rubial-alom-0640a3147/"
+              >
+                <UilLinkedinAlt />
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:opacity-70"
+                href="https://github.com/northeastdev"
+              >
+                <UilGithubAlt />
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="py-16 px-4 md:px-6 lg:px-8">
+          <div className="border border-black-secondary dark:border-white-primary"></div>
+          <div className="py-8 flex items-center justify-between">
+            <div className="space-y-2">
+              <p className="text-2xl sm:text-3xl font-bai font-bold dark:text-white-primary">
+                Rubial Alom.
+              </p>
+              <p className="dark:text-white-primary">
+                Powered by Next.js, Tailwind CSS & Sanity CMS
+              </p>
+            </div>
+            <div>
+              <a href="#home">
+                <div className="flex gap-2 dark:text-white-primary">
+                  <UilArrowUp />
+                  <p className="dark:text-white-primary">Back To Top</p>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import MenuLogo from "../public/menu-btn.svg";
 
 export default function Header() {
   return (
