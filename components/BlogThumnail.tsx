@@ -23,6 +23,9 @@ export default function CaseStudyThumbnail({ posts }: Props) {
                 src={urlFor(post.mainImage).url()}
                 alt={post.author.name}
                 fill
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
               />
               <div className="absolute bottom-0 w-full">
                 <BlogThumbnailTitle {...post} />

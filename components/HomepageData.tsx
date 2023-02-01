@@ -64,6 +64,9 @@ export default function BlogList({ posts }: Props) {
               }
               alt="about image"
               fill
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
             />
           </div>
         </div>
@@ -78,40 +81,40 @@ export default function BlogList({ posts }: Props) {
             "For design and rapid prototyping I use Figma, and to built out the apps and site I primarily use Next.js and Tailwind CSS for frontend and BAAS such as Sanity or Contentful as the backend."
           }
         />
-        <div className=" px-4 lg:px-48 grid grid-cols-3 justify-items-center  sm:flex items-center justify-evenly gap-5 dark:text-white-primary">
+        <div className=" px-4 py-7 lg:px-48 grid grid-cols-3 justify-items-center  sm:flex items-center justify-evenly gap-6 dark:text-white-primary">
           <div className="inline-flex flex-col items-center justify-center ">
-            <div className="relative w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 overflow-hidden drop-shadow-lg ">
-              <Image src={Figma} alt="" fill />
+            <div className="  w-9 h-9 md:w-12 md:h-12 lg:w-16 lg:h-16 drop-shadow-lg ">
+              <Image src={Figma} alt="" />
             </div>
             <p className="text-sm mt-1">Figma</p>
           </div>
           <div className="inline-flex flex-col items-center justify-center">
-            <div className="relative w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 overflow-hidden drop-shadow-lg ">
-              <Image src={Framer} alt="" fill />
+            <div className="  w-9 h-9 md:w-12 md:h-12 lg:w-16 lg:h-16 drop-shadow-lg ">
+              <Image src={Framer} alt="" />
             </div>
             <p className="text-sm mt-1">Framer</p>
           </div>
-          <div className="inline-flex flex-col items-center justify-center">
-            <div className="relative w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 overflow-hidden drop-shadow-lg ">
-              <Image src={Nextjs} alt="" fill />
+          <div className=" inline-flex flex-col items-center justify-center">
+            <div className="  w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 drop-shadow-lg ">
+              <Image className="" src={Nextjs} alt="" />
             </div>
             <p className="text-sm mt-1">Next.js</p>
           </div>
           <div className="inline-flex flex-col items-center justify-center">
-            <div className="relative w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 overflow-hidden drop-shadow-lg ">
-              <Image src={Reactjs} alt="" fill />
+            <div className="  w-9 h-9 md:w-12 md:h-12 lg:w-16 lg:h-16 drop-shadow-lg ">
+              <Image src={Reactjs} alt="" />
             </div>
             <p className="text-sm mt-1">React.js</p>
           </div>
           <div className="inline-flex flex-col items-center justify-center">
-            <div className="relative w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 overflow-hidden drop-shadow-lg ">
-              <Image src={Supabase} alt="" fill />
+            <div className="  w-9 h-9 md:w-12 md:h-12 lg:w-16 lg:h-16 drop-shadow-lg ">
+              <Image src={Supabase} alt="" />
             </div>
             <p className="text-sm mt-1">Supabase</p>
           </div>
           <div className="inline-flex flex-col items-center justify-center">
-            <div className="relative w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 overflow-hidden drop-shadow-lg ">
-              <Image src={Git} alt="" fill />
+            <div className=" w-9 h-9 md:w-12 md:h-12 lg:w-16 lg:h-16 drop-shadow-lg ">
+              <Image src={Git} alt="" />
             </div>
             <p className="text-sm mt-1">Git</p>
           </div>
