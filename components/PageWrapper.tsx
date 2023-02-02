@@ -11,11 +11,12 @@ export default function PageWrapper({
     <>
       <AnimatePresence>
         <motion.div
+          id="home"
           key="homepage"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 15 }}
-          transition={{ delay: 0.1 }}
+          // transition={{ delay: 0.1 }}
         >
           {children}
         </motion.div>

@@ -1,5 +1,4 @@
 import "../globals.css";
-import Header from "@/components/Header";
 import { Inter, Bai_Jamjuree } from "@next/font/google";
 import Navbar from "@/components/Navbar";
 
@@ -27,11 +26,11 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      {/*Banner*/}
       <body
         id="home"
         className="bg-white-primary dark:bg-black-secondary max-w-screen-2xl 2xl:max-w-full m-auto"
       >
+        <Navbar />
         {children}
       </body>
     </html>

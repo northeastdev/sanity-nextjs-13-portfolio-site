@@ -65,3 +65,7 @@ interface TitleDescription {
   subheading: string;
   description: string;
 }
+
+interface Paths {
+  path: string[];
+}

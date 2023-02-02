@@ -6,7 +6,8 @@ import PreviewSuspense from "@/components/PreviewSuspense";
 import PreviewBlogList from "@/components/PreviewBlogList";
 import HomepageData from "@/components/HomepageData";
 import Navbar from "@/components/Navbar";
-import PageWrapper from "./page-wrapper";
+import PageWrapper from "../../components/PageWrapper";
+import { Paths, Post } from "@/typings";
 
 export const revalidate = 60;
 
@@ -31,9 +32,9 @@ export default async function Home() {
   }
 
   const posts = await clientFetch(query);
+
   return (
     <>
-      <Navbar />
       <PageWrapper>
         <main className="">
           <HomepageData posts={posts} />

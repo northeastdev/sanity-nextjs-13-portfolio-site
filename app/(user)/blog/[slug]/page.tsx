@@ -7,7 +7,7 @@ import { PortableText } from "@portabletext/react";
 import { groq } from "next-sanity";
 import Image from "next/image";
 import { cache } from "react";
-import PageWrapper from "../../page-wrapper";
+import PageWrapper from "../../../../components/PageWrapper";
 
 type Props = {
   params: {
@@ -42,10 +42,9 @@ export default async function BlogPost({ params: { slug } }: Props) {
 
   return (
     <>
-      <Navbar />
       <PageWrapper>
-        <article className="max-w-5xl m-auto">
-          <h1 className="font-bai text-3xl lg:font-semibold 2xl:text-5xl px-4 pt-10 md:p-6 lg:px-8 lg:pt-20 dark:text-white-primary">
+        <article className="max-w-5xl m-auto pt-24">
+          <h1 className="font-bai text-3xl lg:font-semibold 2xl:text-5xl px-4 pt-24 md:p-6 lg:px-8 dark:text-white-primary">
             {post.title}
           </h1>
           <div className="flex items-end gap-2 p-4 md:px-6 lg:px-8">

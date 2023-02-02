@@ -24,16 +24,16 @@ type Props = {
 const logos = [
   { id: "twitter", src: Twitter, href: "https://twitter.com/AlomRubial" },
   {
-    id: "twitter",
+    id: "instagram",
     src: Instagram,
     href: "https://www.instagram.com/___rubel.alam___/",
   },
   {
-    id: "twitter",
+    id: "linkedin",
     src: LinkedIn,
     href: "https://www.linkedin.com/in/rubial-alom-0640a3147/",
   },
-  { id: "twitter", src: Github, href: "https://github.com/northeastdev" },
+  { id: "github", src: Github, href: "https://github.com/northeastdev" },
 ];
 
 export default function BlogList({ posts }: Props) {
@@ -221,7 +221,7 @@ export default function BlogList({ posts }: Props) {
             <div>
               <a href="#home">
                 <div className="flex gap-2 dark:text-white-primary">
-                  <p className="dark:text-white-primary hover:scale-110 transition-transform ease-out">
+                  <p className="dark:text-white-primary opacity-60 hover:scale-110 transition-transform ease-out">
                     Back To Top ↑
                   </p>
                 </div>
