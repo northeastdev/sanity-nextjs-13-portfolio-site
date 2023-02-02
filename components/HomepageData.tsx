@@ -21,6 +21,21 @@ type Props = {
   posts: Post[];
 };
 
+const logos = [
+  { id: "twitter", src: Twitter, href: "https://twitter.com/AlomRubial" },
+  {
+    id: "twitter",
+    src: Instagram,
+    href: "https://www.instagram.com/___rubel.alam___/",
+  },
+  {
+    id: "twitter",
+    src: LinkedIn,
+    href: "https://www.linkedin.com/in/rubial-alom-0640a3147/",
+  },
+  { id: "twitter", src: Github, href: "https://github.com/northeastdev" },
+];
+
 export default function BlogList({ posts }: Props) {
   return (
     <div>
@@ -146,9 +161,9 @@ export default function BlogList({ posts }: Props) {
           subheading={"Have a project? Or just wanna chat? Shoot me an email!"}
           description={"You can send me an email, address provided below."}
         />
-        <div className="px-4 md:px-6 lg:px-8 font-extrabold text-xl sm:text-2xl w-fit dark:text-white-primary">
+        <div className="px-4 md:px-6 lg:px-8 font-extrabold text-xl sm:text-2xl w-fit dark:text-white-primary ">
           <Link
-            className="flex items-center gap-2 hover:underline"
+            className="flex items-center gap-2 hover:scale-110 transition-transform duration-150 ease-in-out"
             href="mailto:rubelalam75@gmail.com"
           >
             <p>rubelalam75@gmail.com</p>
@@ -180,44 +195,16 @@ export default function BlogList({ posts }: Props) {
         />
         <div className="px-4 md:px-6 lg:px-8 font-extrabold text-xl sm:text-2xl w-fit dark:text-white-primary">
           <ul className="flex items-center gap-7">
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-70"
-                href="https://twitter.com/AlomRubial"
+            {logos.map((logo) => (
+              <li
+                key={logo.id}
+                className="hover:scale-110 transition-transform duration-150 ease-in-out"
               >
-                <Image src={Twitter} alt="" />
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-70"
-                href="https://www.instagram.com/___rubel.alam___/"
-              >
-                <Image src={Instagram} alt="" />
-              </a>
-            </li>
-            <li>
-              <Link
-                className="hover:opacity-70"
-                href="https://www.linkedin.com/in/rubial-alom-0640a3147/"
-              >
-                <Image src={LinkedIn} alt="" />
-              </Link>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-70"
-                href="https://github.com/northeastdev"
-              >
-                <Image src={Github} alt="" />
-              </a>
-            </li>
+                <a target="_blank" rel="noopener noreferrer" href={logo.href}>
+                  <Image src={logo.src} alt="" />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="pt-16 pb-2 px-4 md:px-6 lg:px-8">

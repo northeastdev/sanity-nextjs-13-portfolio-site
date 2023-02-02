@@ -32,7 +32,6 @@ export default function RootLayout({
         id="home"
         className="bg-white-primary dark:bg-black-secondary max-w-screen-2xl 2xl:max-w-full m-auto"
       >
-        <Navbar />
         {children}
       </body>
     </html>

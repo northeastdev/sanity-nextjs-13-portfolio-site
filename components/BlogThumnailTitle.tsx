@@ -9,7 +9,7 @@ export default function BlogThumbnailTitle({ title, description, slug }: Post) {
       <div className="flex items-center gap-4">
         {/* Case study link */}
         <div className="text-sm hover:underline w-fit">
-          <Link href={`blog/${slug.current}`}>
+          <Link href={`blog/${slug.current}`} className="cursor-pointer ">
             <div className="text-white flex items-center gap-1">
               <p>Read More</p>
               <svg

@@ -5,6 +5,8 @@ import { cache } from "react";
 import PreviewSuspense from "@/components/PreviewSuspense";
 import PreviewBlogList from "@/components/PreviewBlogList";
 import HomepageData from "@/components/HomepageData";
+import Navbar from "@/components/Navbar";
+import PageWrapper from "./page-wrapper";
 
 export const revalidate = 60;
 
@@ -30,8 +32,13 @@ export default async function Home() {
 
   const posts = await clientFetch(query);
   return (
-    <main className="">
-      <HomepageData posts={posts} />
-    </main>
+    <>
+      <Navbar />
+      <PageWrapper>
+        <main className="">
+          <HomepageData posts={posts} />
+        </main>
+      </PageWrapper>
+    </>
   );
 }

@@ -13,7 +13,7 @@ export default function CaseStudyThumbnailTitle({
       <p className="line-clamp-2 opacity-70">{description}</p>
       <div className="flex items-center gap-4">
         {/* Case study link */}
-        <div className="text-sm hover:underline w-fit">
+        <div className="text-sm cursor-pointer hover:underline w-fit">
           <Link href={`blog/${slug.current}`}>
             <div className="text-white flex items-center gap-1">
               <p>Case Study</p>
@@ -35,7 +35,7 @@ export default function CaseStudyThumbnailTitle({
           </Link>
         </div>
 
-        <div className="text-sm hover:underline w-fit">
+        <div className="text-sm cursor-pointer hover:underline w-fit">
           <Link href={`${URL.demoURL}`}>
             <div className="text-white flex items-center gap-1">
               <p>Live</p>
@@ -56,7 +56,7 @@ export default function CaseStudyThumbnailTitle({
             </div>
           </Link>
         </div>
-        <div className="text-sm hover:underline w-fit">
+        <div className="text-sm cursor-pointer hover:underline w-fit">
           <Link href={`${URL.codeURL}`}>
             <div className="text-white flex items-center gap-1">
               <p>Code</p>
