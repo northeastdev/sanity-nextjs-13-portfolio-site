@@ -16,7 +16,7 @@ export default function Navbar() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 15 }}
-        className="sticky py-5 top-0 z-[1] flex items-center justify-between text-white-primary backdrop-blur-3xl 2xl:rounded-2xl"
+        className="fixed w-full max-w-full mx-auto py-5 top-0 z-[1] flex items-center justify-between text-white-primary backdrop-blur-3xl 2xl:rounded-2xl"
       >
         <nav className="px-4 md:px-6 lg:px-8 flex flex-wrap  items-center justify-between w-full">
           <div className="w-full md:w-1/2 relative flex justify-between items-center lg:w-auto lg:static md:justify-start">
@@ -53,9 +53,9 @@ export default function Navbar() {
             <ul className="text-sm mt-7 md:mt-0 flex flex-col gap-y-6 md:flex-row md:items-center md:gap-x-8">
               {path === "/" ? (
                 <li className="nav-item text-black-secondary dark:text-white-primary hover:scale-110 transition-transform duration-150 ease-in-out">
-                  <Link onClick={() => setIsOpen(!isOpen)} href="#about">
+                  <a onClick={() => setIsOpen(!isOpen)} href="#about">
                     <span>About</span>
-                  </Link>
+                  </a>
                 </li>
               ) : (
                 <li className="nav-item text-black-secondary dark:text-white-primary hover:scale-110 transition-transform duration-150 ease-in-out">
@@ -67,9 +67,9 @@ export default function Navbar() {
 
               {path === "/" ? (
                 <li className="nav-item text-black-secondary dark:text-white-primary hover:scale-110 transition-transform duration-150 ease-in-out">
-                  <Link onClick={() => setIsOpen(!isOpen)} href="#blogs">
+                  <a onClick={() => setIsOpen(!isOpen)} href="#blogs">
                     <span>Blogs</span>
-                  </Link>
+                  </a>
                 </li>
               ) : (
                 <li className="nav-item text-black-secondary dark:text-white-primary hover:scale-110 transition-transform duration-150 ease-in-out">

@@ -43,8 +43,8 @@ export default async function BlogPost({ params: { slug } }: Props) {
   return (
     <>
       <PageWrapper>
-        <article className="max-w-5xl m-auto pt-24">
-          <h1 className="font-bai text-3xl lg:font-semibold 2xl:text-5xl px-4 pt-24 md:p-6 lg:px-8 dark:text-white-primary">
+        <article className="max-w-5xl m-auto pt-16 md:pt-24">
+          <h1 className="font-bai lg:font-semibold text-4xl md:font-md md:text-5xl pt-12 lg:pt-20 pb-5 px-4 md:px-6 lg:px-8 dark:text-white-primary">
             {post.title}
           </h1>
           <div className="flex items-end gap-2 p-4 md:px-6 lg:px-8">
@@ -56,7 +56,7 @@ export default async function BlogPost({ params: { slug } }: Props) {
               height={40}
             />
             <div>
-              <p className=" dark:text-white-secondary">{post.author.name}</p>
+              <p className="dark:text-white-secondary">{post.author.name}</p>
               <p className="text-xs dark:text-white-primary opacity-70">{`Published - ${new Date(
                 post._createdAt
               ).toLocaleDateString("en-US", {

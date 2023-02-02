@@ -40,7 +40,7 @@ export default function BlogList({ posts }: Props) {
   return (
     <div>
       <div className="dark:text-white-primary">
-        <h1 className="text-2xl xl:text-3xl font-bai px-4 pt-20 pb-5 md:px-6 lg:px-8 max-w-2xl">
+        <h1 className="text-2xl xl:text-3xl font-bai px-4 pt-32 pb-4 md:px-6 lg:px-8 max-w-2xl">
           Based in India with deep interest in{" "}
           <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 w-full h-10 text-transparent bg-clip-text">
             UI/UX design
