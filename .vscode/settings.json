@@ -1,5 +1,11 @@
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "svg.preview.background": "black"
+  "svg.preview.background": "black",
+  "tailwindCSS.emmetCompletions": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false
 }

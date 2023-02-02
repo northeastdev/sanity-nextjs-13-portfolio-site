@@ -1,90 +1,73 @@
 "use client";
 
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
-  // { name: "Home", href: "/", current: false },
-  { name: "About", href: "#about", current: false },
-  { name: "Blog", href: "#blogs", current: false },
-  { name: "Contact", href: "#contact", current: false },
+  { id: "about", name: "About", href: "#about" },
+  { id: "blog", name: "Blog", href: "#blogs" },
+  // { id: "contact", name: "Contact", href: "#contact" },
 ];
 
-function classNames(...classes: String[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Navbar() {
-  return (
-    <Disclosure as="nav" className="bg-white-secondary dark:bg-black-secondary">
-      {({ open }) => (
-        <>
-          <div className="mx-auto max-w-full px-4 md:px-6 lg:px-8 w-full bg-white-primary dark:bg-black-secondary z-50 fixed top-0 overflow-hidden">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="text-black-secondary dark:text-white-primary text-2xl font-bold font-bai">
-                <h1>Rubial Alom.</h1>
-              </div>
-              <div>
-                <div className="sm:hidden">
-                  <Disclosure.Button className="rounded-md p-2 text-black-primary dark:text-gray-400 hover:bg-gray-700 hover:text-white">
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </Disclosure.Button>
-                </div>
-                <div className="">
-                  <div className="hidden sm:block">
-                    <div className="flex space-x-4">
-                      {navigation.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className={classNames(
-                            item.current
-                              ? "bg-slate-200 text-black-secondary"
-                              : "text-black-secondary dark:text-white-primary hover:bg-gray-700 hover:text-white",
-                            "px-3 py-2 rounded-md text-sm font-medium"
-                          )}
-                          aria-current={item.current ? "page" : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3 border-b border-slate-300 bg-white-primary dark:bg-black-secondary">
+  return (
+    <>
+      <header className="sticky py-5 top-0 z-[1] flex items-center justify-between text-white-primary backdrop-blur-xl rounded-b-2xl">
+        <nav className="px-4 md:px-6 lg:px-8 flex flex-wrap  items-center justify-between w-full">
+          <div className="w-full md:w-1/2 relative flex justify-between items-center lg:w-auto lg:static md:justify-start">
+            <Link href="/">
+              <span className="font-bai text-xl hover:cursor-pointer font-bold leading-relaxed inline-block text-black-secondary dark:text-white-primary">
+                Rubial Alom
+              </span>
+            </Link>
+            <button
+              aria-label="menu button"
+              className="text-slate-700 cursor-pointer text-xl leading-none pl-2 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
+              type="button"
+              onClick={() => setNavbarOpen(!navbarOpen)}
+            >
+              {navbarOpen ? (
+                <XMarkIcon
+                  className="block h-6 w-6 dark:text-white-primary text-black-secondary"
+                  aria-hidden="true"
+                />
+              ) : (
+                <Bars3Icon
+                  className="block h-6 w-6 dark:text-white-primary text-black-secondary"
+                  aria-hidden="true"
+                />
+              )}
+            </button>
+          </div>
+          <div
+            className={"md:flex" + (navbarOpen ? " flex" : " hidden")}
+            id="example-navbar-danger"
+          >
+            <ul className="text-sm mt-7 md:mt-0 flex flex-col gap-y-6 md:flex-row md:items-center md:gap-x-8">
               {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-400 hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
+                <li className="nav-item text-black-secondary" key={item.id}>
+                  <a
+                    onClick={() => setNavbarOpen(!navbarOpen)}
+                    href={item.href}
+                  >
+                    <span className="hover:underline hover:underline-offset-3">
+                      {item.name}
+                    </span>
+                  </a>
+                </li>
               ))}
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+              <button className="border border-gray-300 dark:border-white-primary dark:border-opacity-80 text-black-secondary dark:text-white-primary hover:text-slate-50 hover:bg-slate-900 transition-colors duration-200 rounded-full px-4 py-1">
+                <a onClick={() => setNavbarOpen(!navbarOpen)} href="#contact">
+                  Contact
+                </a>
+              </button>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 }

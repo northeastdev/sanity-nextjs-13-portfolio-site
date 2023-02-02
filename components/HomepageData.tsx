@@ -214,7 +214,7 @@ export default function BlogList({ posts }: Props) {
         <div className="pt-16 pb-2 px-4 md:px-6 lg:px-8">
           <div className="border border-black-secondary dark:border-white-primary"></div>
           <div className="py-8 flex flex-col gap-10 items-center justify-between">
-            <div className="space-y-2">
+            <div className="space-y-3 text-center">
               <p className="text-2xl sm:text-3xl font-bai font-bold dark:text-white-primary">
                 Rubial Alom.
               </p>
