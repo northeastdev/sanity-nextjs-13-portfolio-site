@@ -21,7 +21,7 @@ export default function Navbar() {
         <nav className="px-4 md:px-6 lg:px-8 flex flex-wrap  items-center justify-between w-full">
           <div className="w-full md:w-1/2 relative flex justify-between items-center lg:w-auto lg:static md:justify-start">
             <Link href="/">
-              <span className="font-bai text-xl hover:cursor-pointer font-bold leading-relaxed inline-block text-black-secondary dark:text-white-primary">
+              <span className="font-bai text-2xl pt-5 hover:cursor-pointer font-bold leading-relaxed inline-block text-black-secondary dark:text-white-primary">
                 Rubial Alom
               </span>
             </Link>
@@ -80,13 +80,13 @@ export default function Navbar() {
               )}
 
               {path === "/" ? (
-                <button className="border border-gray-300 dark:border-white-primary dark:border-opacity-80 text-black-secondary dark:text-white-primary hover:text-slate-50 hover:bg-gray-800 transition-colors duration-200 rounded-full px-4 py-1">
+                <button className="border border-gray-600 dark:border-white-primary dark:border-opacity-80 text-black-secondary dark:text-white-primary hover:text-slate-50 hover:bg-gray-800 transition-colors duration-200 rounded-full px-4 py-1">
                   <a onClick={() => setIsOpen(!isOpen)} href="#contact">
                     Contact
                   </a>
                 </button>
               ) : (
-                <button className="border border-gray-300 dark:border-white-primary dark:border-opacity-80 text-black-secondary dark:text-white-primary hover:text-slate-50 hover:bg-gray-800 transition-colors duration-200 rounded-full px-4 py-1">
+                <button className="border border-gray-600 dark:border-white-primary dark:border-opacity-80 text-black-secondary dark:text-white-primary hover:text-slate-50 hover:bg-gray-800 transition-colors duration-200 rounded-full px-4 py-1">
                   <a onClick={() => setIsOpen(!isOpen)} href="/#contact">
                     Contact
                   </a>
