@@ -181,33 +181,42 @@ export default function BlogList({ posts }: Props) {
         <div className="px-4 md:px-6 lg:px-8 font-extrabold text-xl sm:text-2xl w-fit dark:text-white-primary">
           <ul className="flex items-center gap-7">
             <li>
-              <Link
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:opacity-70"
                 href="https://twitter.com/AlomRubial"
               >
                 <Image src={Twitter} alt="" />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:opacity-70"
                 href="https://www.instagram.com/___rubel.alam___/"
-              ></Link>
-              <Image src={Instagram} alt="" />
+              >
+                <Image src={Instagram} alt="" />
+              </a>
             </li>
             <li>
               <Link
                 className="hover:opacity-70"
                 href="https://www.linkedin.com/in/rubial-alom-0640a3147/"
-              ></Link>
-              <Image src={LinkedIn} alt="" />
+              >
+                <Image src={LinkedIn} alt="" />
+              </Link>
             </li>
             <li>
-              <Link
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:opacity-70"
                 href="https://github.com/northeastdev"
-              ></Link>
-              <Image src={Github} alt="" />
+              >
+                <Image src={Github} alt="" />
+              </a>
             </li>
           </ul>
         </div>

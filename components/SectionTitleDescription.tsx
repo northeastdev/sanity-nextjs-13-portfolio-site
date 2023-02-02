@@ -11,8 +11,8 @@ export default function SectionTitleDescription({
         {title}
       </h2>
       <div className="sm:block text-start w-full lg:w-11/12 space-y-5  ">
-        <h3 className="font-bold">{subheading}</h3>
-        <p className="text-xs md:text-sm opacity-80">{description}</p>
+        <h3 className="font-semibold">{subheading}</h3>
+        {/* <p className="text-xs md:text-sm opacity-80">{description}</p> */}
       </div>
     </div>
   );

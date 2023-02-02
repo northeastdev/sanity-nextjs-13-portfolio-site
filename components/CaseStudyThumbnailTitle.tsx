@@ -10,7 +10,7 @@ export default function CaseStudyThumbnailTitle({
   return (
     <div className=" opacity-95 bg-neutral-800 text-sm py-5 px-5 space-y-4 rounded-md text-white">
       <h3 className=" text-lg font-bold">{title}</h3>
-      <p className="line-clamp-2">{description}</p>
+      <p className="line-clamp-2 opacity-70">{description}</p>
       <div className="flex items-center gap-4">
         {/* Case study link */}
         <div className="text-sm hover:underline w-fit">

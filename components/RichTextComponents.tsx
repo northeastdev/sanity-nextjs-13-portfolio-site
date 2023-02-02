@@ -24,7 +24,7 @@ export const RichTextComponents = {
       const target = !value.href.startsWith("/") ? "_blank" : undefined;
       return (
         <Link
-          className=" text-blue-700 hover:underline underline-offset-1"
+          className=" text-blue-700 dark:text-[#ec4899] hover:underline underline-offset-1"
           href={value?.href}
           target={target}
           // rel={target === "_blank" && "noindex nofollow"}
@@ -37,7 +37,7 @@ export const RichTextComponents = {
   block: {
     // Ex. 1: customizing common block types
     h1: ({ children }: any) => (
-      <h1 className="text-3xl md:text-4xl my-8 dark:text-white">{children}</h1>
+      <h1 className="text-3xl md:text-4xl dark:text-white">{children}</h1>
     ),
     h2: ({ children }: any) => (
       <h2 className="text-xl md:text-3xl my-6">{children}</h2>
@@ -46,7 +46,7 @@ export const RichTextComponents = {
     h4: ({ children }: any) => <h4 className="text-lg my-2">{children}</h4>,
     normal: ({ children }: any) => <p className="my-4">{children}</p>,
     blockquote: ({ children }: any) => (
-      <blockquote className="border-l-4 border-slate-500 rounded-sm bg-gray-200 p-2 my-10`">
+      <blockquote className="border-l-4 border-slate-500 rounded-sm bg-gray-200 dark:bg-opacity-70 dark:text-black-secondary p-2 my-12">
         {children}
       </blockquote>
     ),
