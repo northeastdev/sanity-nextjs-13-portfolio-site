@@ -14,7 +14,11 @@ export default function CaseStudyThumbnailTitle({
       <div className="flex items-center gap-4">
         {/* Case study link */}
         <div className="text-sm cursor-pointer hover:underline w-fit">
-          <Link href={`blog/${slug.current}`}>
+          <Link
+            href={`blog/${slug.current}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="text-white flex items-center gap-1">
               <p>Case Study</p>
               <svg
@@ -36,7 +40,11 @@ export default function CaseStudyThumbnailTitle({
         </div>
 
         <div className="text-sm cursor-pointer hover:underline w-fit">
-          <Link href={`${URL.demoURL}`}>
+          <Link
+            href={`${URL.demoURL}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="text-white flex items-center gap-1">
               <p>Live</p>
               <svg
@@ -57,7 +65,11 @@ export default function CaseStudyThumbnailTitle({
           </Link>
         </div>
         <div className="text-sm cursor-pointer hover:underline w-fit">
-          <Link href={`${URL.codeURL}`}>
+          <Link
+            href={`${URL.codeURL}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="text-white flex items-center gap-1">
               <p>Code</p>
               <svg
