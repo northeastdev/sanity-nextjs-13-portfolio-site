@@ -8,7 +8,7 @@ export const RichTextComponents = {
       return (
         <div className="relative w-full h-[200px] sm:h-[300px] md:h-[380px] lg:h-[430px] my-8 md:my-12">
           <Image
-            className="object-cover"
+            className="object-contain"
             src={urlFor(value).url()}
             alt={value.alt || ""}
             fill
