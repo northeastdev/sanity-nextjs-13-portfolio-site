@@ -74,7 +74,7 @@ export default function Navbar() {
               ) : (
                 <li className="nav-item text-black-secondary dark:text-white-primary hover:scale-110 transition-transform duration-150 ease-in-out">
                   <a onClick={() => setIsOpen(!isOpen)} href="/#blogs">
-                    <span>About</span>
+                    <span>Blogs</span>
                   </a>
                 </li>
               )}
