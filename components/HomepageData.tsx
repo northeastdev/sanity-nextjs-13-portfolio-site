@@ -41,7 +41,7 @@ export default function BlogList({ posts }: Props) {
   return (
     <div>
       <div className="dark:text-white-primary">
-        <h1 className="text-2xl xl:text-3xl text-center sm:text-left font-bai px-4 pt-48 pb-4 md:px-6 lg:px-8 md:max-w-2xl ">
+        <h1 className="text-2xl xl:text-3xl text-center sm:text-left font-bai px-4 pt-44 pb-4 md:px-6 lg:px-8 md:max-w-2xl ">
           Based in India with deep interest in{" "}
           <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 w-full h-10 text-transparent bg-clip-text">
             UI/UX design
@@ -51,6 +51,20 @@ export default function BlogList({ posts }: Props) {
             frontend engineering.
           </span>
         </h1>
+      </div>
+      <div className="px-4 w-full py-6 md:px-6 lg:px-8 font-extrabold text-xl sm:text-2xl dark:text-white-primary">
+        <ul className="flex items-center justify-center sm:justify-start gap-7">
+          {logos.map((logo) => (
+            <li
+              key={logo.id}
+              className="hover:scale-110 transition-transform duration-150 ease-in-out"
+            >
+              <a target="_blank" rel="noopener noreferrer" href={logo.href}>
+                <Image src={logo.src} alt="" />
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="relative sm:hidden mt-5">
         <GradientDivider />
@@ -189,25 +203,12 @@ export default function BlogList({ posts }: Props) {
         id="contact"
         className="py-4 md:py-6 lg:py-8 pt-24 md:pt-28 lg:pt-32"
       >
-        <SectionHeader
+        {/* <SectionHeader
           title={"Follow Me"}
           subheading={"Connect with me on the following socials"}
           description={"I mostly hangout on twitter and instagram!"}
-        />
-        <div className="px-4 md:px-6 lg:px-8 font-extrabold text-xl sm:text-2xl w-fit dark:text-white-primary">
-          <ul className="flex items-center gap-7">
-            {logos.map((logo) => (
-              <li
-                key={logo.id}
-                className="hover:scale-110 transition-transform duration-150 ease-in-out"
-              >
-                <a target="_blank" rel="noopener noreferrer" href={logo.href}>
-                  <Image src={logo.src} alt="" />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        /> */}
+
         <div className="pt-16 pb-2 px-4 md:px-6 lg:px-8">
           <div className="border border-black-secondary dark:border-white-primary"></div>
           <div className="py-8 flex flex-col gap-10 items-center justify-between">

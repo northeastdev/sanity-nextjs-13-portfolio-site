@@ -8,16 +8,16 @@ export default function CaseStudyThumbnailTitle({
   URL,
 }: Post) {
   return (
-    <div className=" opacity-95 bg-neutral-800 text-sm py-5 px-5 space-y-4 rounded-md text-white">
+    <div className=" opacity-95 bg-neutral-900/80 backdrop-blur-md text-sm py-5 px-5 space-y-4 rounded-md text-white">
       <h3 className=" text-lg font-bold">{title}</h3>
       <p className="line-clamp-2 opacity-70">{description}</p>
       <div className="flex items-center gap-4">
         {/* Case study link */}
         <div className="text-sm cursor-pointer hover:underline w-fit">
           <Link href={`blog/${slug.current}`}>
-            <div className="text-white flex items-center gap-1">
+            <div className="text-white flex items-center gap-1 underline underline-offset-4">
               <p>Case Study</p>
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -30,14 +30,14 @@ export default function CaseStudyThumbnailTitle({
                   strokeLinejoin="round"
                   d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
                 />
-              </svg>
+              </svg> */}
             </div>
           </Link>
         </div>
 
         <div className="text-sm cursor-pointer hover:underline w-fit">
-          <Link href={`${URL.demoURL}`}>
-            <div className="text-white flex items-center gap-1">
+          <Link href={`${URL.demoURL}`} target="_blank">
+            <div className="text-white flex items-center gap-1 underline underline-offset-4">
               <p>Live</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,8 +57,8 @@ export default function CaseStudyThumbnailTitle({
           </Link>
         </div>
         <div className="text-sm cursor-pointer hover:underline w-fit">
-          <Link href={`${URL.codeURL}`}>
-            <div className="text-white flex items-center gap-1">
+          <Link href={`${URL.codeURL}`} target="_blank">
+            <div className="text-white flex items-center gap-1 underline underline-offset-4">
               <p>Code</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
