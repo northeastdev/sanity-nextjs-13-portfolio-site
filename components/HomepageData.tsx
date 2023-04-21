@@ -16,6 +16,7 @@ import GradientDivider from "./GradientDivider";
 import Link from "next/link";
 import CaseStudyThumbnail from "./CaseStudyThumbnail";
 import BlogThumbnail from "./BlogThumnail";
+import ScrollToTop from "./ScrollToTop";
 
 type Props = {
   posts: Post[];
@@ -218,15 +219,7 @@ export default function BlogList({ posts }: Props) {
                 Powered by Next.js, Tailwind CSS & Sanity CMS
               </p>
             </div>
-            <div>
-              <a href="#home">
-                <div className="flex gap-2 dark:text-white-primary">
-                  <p className="dark:text-white-primary opacity-60 hover:scale-110 transition-transform ease-out">
-                    Back To Top ↑
-                  </p>
-                </div>
-              </a>
-            </div>
+            <ScrollToTop />
           </div>
         </div>
       </div>
