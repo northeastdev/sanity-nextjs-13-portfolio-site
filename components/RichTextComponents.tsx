@@ -46,7 +46,7 @@ export const RichTextComponents = {
     h3: ({ children }: any) => <h3 className="text-lg my-4">{children}</h3>,
     h4: ({ children }: any) => <h4 className="text-md my-3">{children}</h4>,
     normal: ({ children }: any) => (
-      <p className="my-4 opacity-70">{children}</p>
+      <p className="my-4 opacity-75 leading-snug">{children}</p>
     ),
     blockquote: ({ children }: any) => (
       <blockquote className="border-l-4 border-slate-500 rounded-sm bg-gray-200 dark:bg-opacity-70 dark:text-black-secondary p-2 my-12">

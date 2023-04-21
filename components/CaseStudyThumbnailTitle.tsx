@@ -8,14 +8,14 @@ export default function CaseStudyThumbnailTitle({
   URL,
 }: Post) {
   return (
-    <div className=" opacity-95 bg-neutral-900/80 backdrop-blur-md text-sm py-5 px-5 space-y-4 rounded-md text-white">
-      <h3 className=" text-lg font-bold">{title}</h3>
+    <div className="bg-white-secondary/80 dark:bg-neutral-900/70 dark:text-white backdrop-blur-sm text-sm py-5 px-5 space-y-4 rounded-md ">
+      <h3 className=" text-lg font-bold leading-tight">{title}</h3>
       <p className="line-clamp-2 opacity-70">{description}</p>
       <div className="flex items-center gap-4">
         {/* Case study link */}
         <div className="text-sm cursor-pointer hover:underline w-fit">
           <Link href={`blog/${slug.current}`}>
-            <div className="text-white flex items-center gap-1 underline underline-offset-4">
+            <div className="dark:text-white flex items-center gap-1 underline underline-offset-4">
               <p>Case Study</p>
               {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ export default function CaseStudyThumbnailTitle({
 
         <div className="text-sm cursor-pointer hover:underline w-fit">
           <Link href={`${URL.demoURL}`} target="_blank">
-            <div className="text-white flex items-center gap-1 underline underline-offset-4">
+            <div className="dark:text-white flex items-center gap-1 underline underline-offset-4">
               <p>Live</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ export default function CaseStudyThumbnailTitle({
         </div>
         <div className="text-sm cursor-pointer hover:underline w-fit">
           <Link href={`${URL.codeURL}`} target="_blank">
-            <div className="text-white flex items-center gap-1 underline underline-offset-4">
+            <div className="dark:text-white flex items-center gap-1 underline underline-offset-4">
               <p>Code</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
