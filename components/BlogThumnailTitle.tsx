@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function BlogThumbnailTitle({ title, description, slug }: Post) {
   return (
-    <div className=" opacity-95 bg-neutral-900/80 backdrop-blur-md text-sm py-5 px-5 space-y-4 rounded-md text-white">
+    <div className=" bg-white-secondary/95 dark:bg-neutral-900/95 dark:text-white text-sm py-5 px-5 space-y-4 rounded-md">
       <h3 className=" text-lg font-bold">{title}</h3>
       <p className="line-clamp-2 opacity-70">{description}</p>
       <div className="flex items-center gap-4">
         {/* Case study link */}
         <div className="text-sm hover:underline w-fit">
           <Link href={`blog/${slug.current}`} className="cursor-pointer ">
-            <div className="text-white flex items-center gap-1 underline underline-offset-4">
+            <div className="flex items-center gap-1 underline underline-offset-4 dark:text-white">
               <p>Read More</p>
               {/* <svg
                 xmlns="http://www.w3.org/2000/svg"

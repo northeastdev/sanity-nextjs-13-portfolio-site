@@ -8,7 +8,7 @@ export default function CaseStudyThumbnailTitle({
   URL,
 }: Post) {
   return (
-    <div className="bg-white-secondary/80 dark:bg-neutral-900/70 dark:text-white backdrop-blur-sm text-sm py-5 px-5 space-y-4 rounded-md ">
+    <div className="bg-white-secondary/95 dark:bg-neutral-900/95 dark:text-white text-sm py-5 px-5 space-y-4 rounded-md ">
       <h3 className=" text-lg font-bold leading-tight">{title}</h3>
       <p className="line-clamp-2 opacity-70">{description}</p>
       <div className="flex items-center gap-4">

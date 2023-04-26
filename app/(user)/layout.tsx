@@ -21,7 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${bai.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${bai.variable} ${inter.variable} ${"scroll-smooth"}`}
+    >
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
