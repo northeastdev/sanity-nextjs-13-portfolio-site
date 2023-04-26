@@ -60,7 +60,7 @@ export default function BlogList({ posts }: Props) {
               className="hover:scale-110 transition-transform duration-150 ease-in-out"
             >
               <a target="_blank" rel="noopener noreferrer" href={logo.href}>
-                <Image src={logo.src} alt="" />
+                <Image src={logo.src} alt="social-icons" />
               </a>
             </li>
           ))}
@@ -210,7 +210,7 @@ export default function BlogList({ posts }: Props) {
         /> */}
 
         <div className="pt-16 pb-2 px-4 md:px-6 lg:px-8">
-          <div className="border border-black-secondary dark:border-white-primary"></div>
+          <div className="border border-dashed border-neutral-400 dark:border-slate-700"></div>
           <div className="py-8 flex flex-col gap-10 items-center justify-between">
             <div className="space-y-3 text-center">
               <p className="text-2xl sm:text-3xl font-bai font-bold dark:text-white-primary">

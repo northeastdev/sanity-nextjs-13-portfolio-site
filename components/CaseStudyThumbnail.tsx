@@ -13,10 +13,13 @@ export default function CaseStudyThumbnail({ posts }: Props) {
     (post) => post.categories[0].title === "Case Study"
   );
   return (
-    <div>
-      <div className=" bg-white-secondary/95 dark:bg-neutral-900/95 dark:text-white grid md:grid-cols-2 lg:grid-cols-3 gap-7 px-4 md:px-6 lg:px-8 max-w-full m-auto">
+    <>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 px-4 md:px-6 lg:px-8 max-w-full m-auto ">
         {caseStudies.map((post) => (
-          <div key={post._id} className="group overflow-hidden rounded-md">
+          <div
+            key={post._id}
+            className="group overflow-hidden rounded-md shadow-sm"
+          >
             <div className="drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
               <Link href={`blog/${post.slug.current}`}>
                 <div className="relative w-full h-[450px]">
@@ -39,6 +42,6 @@ export default function CaseStudyThumbnail({ posts }: Props) {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }

@@ -11,10 +11,13 @@ type Props = {
 export default function CaseStudyThumbnail({ posts }: Props) {
   const blogs = posts.filter((post) => post.categories[0].title === "Blogs");
   return (
-    <div>
+    <>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 px-4 md:px-6 lg:px-8 max-w-full m-auto">
         {blogs.map((post) => (
-          <div key={post._id} className="group overflow-hidden rounded-md">
+          <div
+            key={post._id}
+            className="group overflow-hidden rounded-md shadow-sm"
+          >
             <div className="drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
               <Link
                 href={`blog/${post.slug.current}`}
@@ -39,6 +42,6 @@ export default function CaseStudyThumbnail({ posts }: Props) {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
